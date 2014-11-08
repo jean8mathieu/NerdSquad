@@ -20,6 +20,16 @@
         margin: 0px;
         padding: 0px
       }
+      #combo {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
       </style>
     <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
