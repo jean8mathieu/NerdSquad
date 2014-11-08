@@ -70,7 +70,6 @@
         };
 
             function initialize() {
-                alert("Hello");
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: new google.maps.LatLng(43.6558658, -79.380568),
                     zoom: 10,
@@ -89,6 +88,8 @@
                         map.setCenter(newPoint);
                     }
                 });
+
+                update();
                 }
 
                 function clearOverlays() {
@@ -99,6 +100,7 @@
 
 
 
+            function update(){
                 clearOverlays();
                 downloadUrl( domain, function (data) {
                     var xml = data.responseXML;
@@ -126,6 +128,7 @@
                     }
                 });
 
+            }
 
         function bindInfoWindow(marker, map, infoWindow, html) {
             google.maps.event.addListener(marker, 'click', function () {
@@ -156,9 +159,10 @@
             var e = document.getElementById('category').value;
             domain = "generateXML.php";
             domain = domain + "?category=" + e;
-            alert(domain);
-            initialize();
+            //alert(domain);
+            update();
         }
+
     </script>
 </head>
 <body onload="initialize();">
