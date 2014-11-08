@@ -8,7 +8,24 @@
 <meta charset="ISO-8859-1">
 <title>Registration Form</title>
 </head>
-<body>
+<body><%
+Connection conn = null;
+try{
+//"jdbc:mysql://68.178.143.9:3306/thoughtspot"
+conn = DriverManager.getConnection("jdbc:mysql://p3nlmysqladm002.secureserver.net/grid55/15/index.php:3306/toughtspot","thoughtspot","Nerdsquad14!");
+if(conn != null){
+System.out.println("connected");
+}
+//String query = ("SELECT program, school FROM Programs p INNER JOIN Schools s WHERE p.program=s.program;");
+//PreparedStatement ps = null;
+
+}catch(SQLException e){
+	e.printStackTrace();
+}finally{
+	}
+
+
+%>
 
 
 	<form method="post" action="controler">
