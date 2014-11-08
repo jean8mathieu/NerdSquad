@@ -15,8 +15,8 @@
     <meta charset="utf-8"/>
     <title>Maps Test</title>
     <style>
-      html, body, #map-canvas {
-        height: 90%;
+      html, body, #map {
+        height: 100%;
         margin: 0px;
         padding: 0px
       }
