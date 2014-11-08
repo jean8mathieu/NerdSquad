@@ -155,7 +155,7 @@
     </script>
 </head>
 <body onload="initialize()">
-     <div id="map"/>
+    <div id="map"></div>
     <div id="combo">
         <select>
             <option value="a">a</option>
