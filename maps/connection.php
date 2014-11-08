@@ -6,7 +6,7 @@
  * Time: 10:14 AM
  */
 
-$SQLhost = "";
-$SQLusername = "";
-$SQLpassword = "";
-$SQLdb_name = "";
+$SQLhost = "thoughtspot.db.9124079.hostedresource.com";
+$SQLusername = "thoughtspot";
+$SQLpassword = "Nerdsquad14!";
+$SQLdb_name = "thoughtspot";

@@ -25,10 +25,28 @@
         var markersArray = [];
         var customIcons = {
             0: {
-                icon: 'images/mm_20_green.png'
+                icon: 'images/all.png'
             },
             1: {
-                icon: 'images/mm_20_red.png'
+                icon: 'images/school.png'
+            },
+            2: {
+                icon: 'images/spirituality.png'
+            },
+            3: {
+                icon: 'images/recreation.png'
+            },
+            4: {
+                icon: 'images/legal.png'
+            },
+            5: {
+                icon: 'images/health.png'
+            },
+            6: {
+                icon: 'images/family.png'
+            },
+            7: {
+                icon: 'images/sex.png'
             }
         };
 
@@ -59,7 +77,6 @@
             }
         }
 
-        function autoUpdate() {
 
             clearOverlays();
             downloadUrl("generateXML.php", function (data) {
@@ -67,13 +84,15 @@
                 var markers = xml.documentElement.getElementsByTagName("marker");
                 console.log(markers);
                 for (var i = 0; i < markers.length; i++) {
-                    var name = markers[i].getAttribute("id");
-                    var address = markers[i].getAttribute("address");
+                    var title = markers[i].getAttribute("title");
+                    var desc = markers[i].getAttribute("desc");
+                    var location = markers[i].getAttribute("location");
+                    var category = markers[i].getAttribute("category");
                     var type = markers[i].getAttribute("alert");
                     var point = new google.maps.LatLng(
                         parseFloat(markers[i].getAttribute("lat")),
                         parseFloat(markers[i].getAttribute("lng")));
-                    var html = "<b>" + name + "</b>";
+                    var html = "<b>" + title + "<br>" + location + "<br>" + category + + "</b>";
                     var icon = customIcons[type] || {};
                     marker = new google.maps.Marker({
                         map: map,
@@ -87,8 +106,8 @@
             });
 
             // Call the autoUpdate() function every 5 seconds
-            setTimeout(autoUpdate, 5000);
-        }
+            //setTimeout(autoUpdate, 5000);
+
 
         function bindInfoWindow(marker, map, infoWindow, html) {
             google.maps.event.addListener(marker, 'click', function () {
