@@ -11,7 +11,7 @@
 <!doctype html>
 <html>
 <head>
-    
+
     <meta charset="utf-8"/>
     <title>Maps Test</title>
     <style>
@@ -21,10 +21,10 @@
         padding: 0px;
       }
       #combo {
-        position: absolute;
+        position: fixed;
         top: 5px;
         left: 50%;
-        margin-left: -180px;
+        margin-left: -55px;
         z-index: 5;
         background-color: #fff;
         padding: 5px;
@@ -35,6 +35,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
         // Initialize the Google Maps API v3
+        var domain = "generateXML.php";
         var markers = [];
         var map;
         var x = 0;
@@ -68,63 +69,61 @@
             }
         };
 
-        function initialize() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: new google.maps.LatLng(47.6145, -122.3418),
-                zoom: 10,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            });
-            infoWindow = new google.maps.InfoWindow;
+            function initialize() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: new google.maps.LatLng(43.6558658, -79.380568),
+                    zoom: 10,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                });
+                infoWindow = new google.maps.InfoWindow;
 
-            navigator.geolocation.getCurrentPosition(function (position) {
+                navigator.geolocation.getCurrentPosition(function (position) {
 
 
-                var newPoint = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                    var newPoint = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
-                x++;
-                if (x === 1) {
-                    console.log(newPoint);
-                    map.setCenter(newPoint);
+                    x++;
+                    if (x === 1) {
+                        console.log(newPoint);
+                        map.setCenter(newPoint);
+                    }
+                });
                 }
-            });
-        }
 
-        function clearOverlays() {
-            for (var i = 0; i < markersArray.length; i++) {
-                markersArray[i].setMap(null);
-            }
-        }
-
-
-            clearOverlays();
-            downloadUrl("generateXML.php", function (data) {
-                var xml = data.responseXML;
-                var markers = xml.documentElement.getElementsByTagName("marker");
-                console.log(markers);
-                for (var i = 0; i < markers.length; i++) {
-                    var title = markers[i].getAttribute("title");
-                    var desc = markers[i].getAttribute("desc");
-                    var location = markers[i].getAttribute("location");
-                    var category = markers[i].getAttribute("category");
-                    var type = markers[i].getAttribute("alert");
-                    var point = new google.maps.LatLng(
-                        parseFloat(markers[i].getAttribute("lat")),
-                        parseFloat(markers[i].getAttribute("lng")));
-                    var html = "<b>" + title + "<br>" + location + "<br>" + category + + "</b>";
-                    var icon = customIcons[type] || {};
-                    marker = new google.maps.Marker({
-                        map: map,
-                        position: point,
-                        icon: icon.icon
-                    });
-                    markersArray.push(marker);
-
-                    bindInfoWindow(marker, map, infoWindow, html);
+                function clearOverlays() {
+                    for (var i = 0; i < markersArray.length; i++) {
+                        markersArray[i].setMap(null);
+                    }
                 }
-            });
 
-            // Call the autoUpdate() function every 5 seconds
-            //setTimeout(autoUpdate, 5000);
+
+
+                clearOverlays();
+                downloadUrl( domain, function (data) {
+                    var xml = data.responseXML;
+                    var markers = xml.documentElement.getElementsByTagName("marker");
+                    console.log(markers);
+                    for (var i = 0; i < markers.length; i++) {
+                        var title = markers[i].getAttribute("title");
+                        var desc = markers[i].getAttribute("desc");
+                        var location = markers[i].getAttribute("location");
+                        var category = markers[i].getAttribute("category");
+                        var type = markers[i].getAttribute("alert");
+                        var point = new google.maps.LatLng(
+                            parseFloat(markers[i].getAttribute("lat")),
+                            parseFloat(markers[i].getAttribute("lng")));
+                        var html = "<b>" + title + "<br>" + location + "<br>" + category + + "</b>";
+                        var icon = customIcons[type] || {};
+                        marker = new google.maps.Marker({
+                            map: map,
+                            position: point,
+                            icon: icon.icon
+                        });
+                        markersArray.push(marker);
+
+                        bindInfoWindow(marker, map, infoWindow, html);
+                    }
+                });
 
 
         function bindInfoWindow(marker, map, infoWindow, html) {
@@ -151,18 +150,28 @@
         }
         function doNothing() {
         }
-        autoUpdate();
+
+        function getCategory(){
+            var e = document.getElementById('category').value;
+            domain = "generateXML.php";
+            domain = domain + "?category=" + e;
+            alert(domain);
+            initialize();
+        }
     </script>
 </head>
-<body onload="initialize()">
+<body onload="initialize();">
     <div id="map"></div>
     <div id="combo">
-        <select>
-            <option value="a">a</option>
-            <option value="b">b</option>
-            <option value="c">c</option>
-            <option value="d">d</option>
-        </select>  
+        <select id="category" onchange="getCategory();">
+            <option value=""></option>
+            <option value="Legal%20and%20Financial">Legal & Financial</option>
+            <option value="Health%20and%20Social">Health & Social</option>
+            <option value="Recreation%20and%20Culture">Recreation & Culture</option>
+            <option value="Spirituality%20and%20Wellbeing">Spirituality & Wellbeing</option>
+            <option value="Work%20and%20School">Work & School</option> 
+            <option value="Sex%20and%20Relationships">Sex & Relationships</option>
+        </select>
     </div>
      </body>
 </html>

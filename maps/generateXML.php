@@ -24,7 +24,7 @@ if (!$db_selected) {
 $category = $_GET['Category'];
 
 if(isset($_GET['category'])){
-    $query = "SELECT * FROM Locations WHERE category='" . $category . "'";
+    $query = "SELECT * FROM Locations WHERE category LIKE'%" . $category . "%'";
 }else{
     $query = "SELECT * FROM Locations";
 }
