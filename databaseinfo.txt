@@ -1,0 +1,11 @@
+Admin URL (phpMyAdmin) £º
+https://p3nlmysqladm002.secureserver.net/grid55/15
+
+Hostname£º
+thoughtspot.db.9124079.hostedresource.com
+
+Database name and username £º
+thoughtspot
+
+Password:
+Nerdsquad14!
