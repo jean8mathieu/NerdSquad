@@ -25,7 +25,7 @@
         top: 5px;
         left: 50%;
         margin-left: -180px;
-        z-index: 0;
+        z-index: 5;
         background-color: #fff;
         padding: 5px;
         border: 1px solid #999;
@@ -68,7 +68,7 @@
             }
         };
 
-        function load() {
+        function initialize() {
             map = new google.maps.Map(document.getElementById('map'), {
                 center: new google.maps.LatLng(47.6145, -122.3418),
                 zoom: 10,
@@ -154,7 +154,7 @@
         autoUpdate();
     </script>
 </head>
-<body onload="load()" >
+<body>
      <div id="map"/>
     <div id="combo">
         <select>
@@ -164,5 +164,5 @@
             <option value="d">d</option>
         </select>  
     </div>
-</body>
+     </body>
 </html>
