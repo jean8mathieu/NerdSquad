@@ -154,7 +154,7 @@
         autoUpdate();
     </script>
 </head>
-<body>
+<body onload="initialize()">
      <div id="map"/>
     <div id="combo">
         <select>
