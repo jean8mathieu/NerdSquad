@@ -156,6 +156,13 @@
 </head>
 <body onload="load()" >
      <div id="map"/>
-    <div id="combo" />
+    <div id="combo">
+        <select>
+            <option value="a">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+            <option value="d">d</option>
+        </select>  
+    </div>
 </body>
 </html>
