@@ -18,7 +18,7 @@
       html, body, #map {
         height: 100%;
         margin: 0px;
-        padding: 0px
+        padding: 0px;
       }
       #combo {
         position: absolute;
