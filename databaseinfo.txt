@@ -1,10 +1,10 @@
-Admin URL (phpMyAdmin) £º
+Admin URL (phpMyAdmin) :
 https://p3nlmysqladm002.secureserver.net/grid55/15
 
-Hostname£º
+Hostname:
 thoughtspot.db.9124079.hostedresource.com
 
-Database name and username £º
+Database name and username :
 thoughtspot
 
 Password:
