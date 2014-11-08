@@ -71,7 +71,7 @@ function getLogo($category){
         }
     }
 */
-    if(isset($_GET['category'])){
+    if(isset($_GET['category']) && strlen($_GET['category']) > 1){
         if($_GET['category'] == "Work and School"){
             return 1;
         }elseif($_GET['category'] == "Spirituality and Wellbeing"){
