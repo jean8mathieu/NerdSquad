@@ -16,7 +16,7 @@
     <title>Maps Test</title>
     <style>
       html, body, #map-canvas {
-        height: 100%;
+        height: 90%;
         margin: 0px;
         padding: 0px
       }
