@@ -11,6 +11,9 @@
 <!doctype html>
 <html>
 <head>
+    
+    <meta charset="utf-8"/>
+    <title>Maps Test</title>
     <style>
       html, body, #map-canvas {
         height: 100%;
@@ -18,8 +21,6 @@
         padding: 0px
       }
       </style>
-    <meta charset="utf-8"/>
-    <title>Maps Test</title>
     <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
@@ -143,18 +144,8 @@
         autoUpdate();
     </script>
 </head>
-<body onload="load()">
-<section id="main" class="column">
-    <!--<h4 class="alert_info">Welcome on the administration page! Made by <a href="http://jmdev.ca">JMDev</a></h4>
-    ?>-->
-
-    <div id="map" style="height: 100%; margin: 0px; padding: 0px;"/>
-    <div id="combo" style="position: absolute; top: 5px; left: 50%; margin-left: -180px; z-index: 5; background-color: #fff; padding: 5px; border: 1px solid #999;" />
-    <!--<article class="module width_3_quarter">
-    </article>-->
-    <div class="spacer"></div>
-</section>
-
-
+<body onload="load()" >
+     <div id="map"/>
+    <div id="combo" />
 </body>
 </html>
