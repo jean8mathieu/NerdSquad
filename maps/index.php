@@ -25,7 +25,7 @@
         top: 5px;
         left: 50%;
         margin-left: -180px;
-        z-index: 5;
+        z-index: 0;
         background-color: #fff;
         padding: 5px;
         border: 1px solid #999;
