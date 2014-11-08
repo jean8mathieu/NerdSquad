@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>NeardSquad</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this templates -->
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/panel.css">
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600,700' rel='stylesheet' type='text/css'>
+		<!--<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">-->
+	</head>
+	<body>
+		<!----------------Creating the navigation panel---------------------->
+		<header>
+			<div class="navbar navbar-inverse navbar-fixed-top " role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<p id="profile">SmartStady</p>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right" id="mainmenu">
+							<li ><a href=""><span class="glyphicon glyphicon-plus" ></span> Add</a></li>
+							
+							<li ><a style="" href=""><span class="glyphicon glyphicon-user" ></span> Thougths</a></li>	
+							
+							<li ><a href=""><span class="glyphicon glyphicon-envelope" ></span> Contact with a specialit</a></li>
+
+							<li ><a href=""><span class="glyphicon glyphicon-list" ></span> Sources</a></li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!------------------------------------------------------------------->
+		<div id="bodycontainer">
+		<div class="container ol-lg-6">
+		<h1 class="panel">Look at this. We think it may be helpfull for you</h1>
+		<img id="image" src="../images/map.PNG" width="auto" border="0" alt="">
+		</div>
+		</div> <!-- /container -->
+
+	<footer class="footer">
+        <p><p>Content &copy; SmartStudy</p></p>
+    </footer>
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="../js/ie10-viewport-bug-workaround.js"></script>
+		<script src="../js/ie-emulation-modes-warning.js"></script>
+	</body>
+</html>
