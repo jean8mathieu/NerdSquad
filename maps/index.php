@@ -70,6 +70,7 @@
         };
 
             function initialize() {
+                alert("Hello");
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: new google.maps.LatLng(43.6558658, -79.380568),
                     zoom: 10,
