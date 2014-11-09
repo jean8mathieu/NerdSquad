@@ -131,7 +131,7 @@ border:2 px solid black;
 }
 #right-panel
 {
-height:88%;
+height:89%;
 width:300px;
 background-color:white;
 position:fixed;
@@ -147,8 +147,14 @@ nav
 padding-top:200;
 background-color:red;
 }
-sector{
+#bodycontainer{
 width:100%;
+padding:0px;
+float:left;
+position:fixed;
+top:55px;
+left:0px;
+background-color:red;
 }
 .col-sm-offset-1{
     margin-left: 0 !important;
