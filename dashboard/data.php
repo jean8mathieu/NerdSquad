@@ -10,7 +10,6 @@ getbyCate($cur_lati,$cur_long,$cate,10);
 
 function getbyCate($cur_lati,$cur_long,$cate,$kmfilter){
 
-
     include("../includes/destinationInfo.php");
 
     $SQLhost = "thoughtspot.db.9124079.hostedresource.com";
