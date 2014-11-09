@@ -1,11 +1,13 @@
 <?php
 
-    $cur_lati = 43.656906;
-    $cur_long = -79.434356;
 
-$cate = $_GET['cate'];
 
-getbyCate($cur_lati,$cur_long,$cate,10);
+    $cur_lati = $_SESSION['lat'];
+    $cur_long = $_SESSION['long'];
+
+    $cate = $_GET['cate'];
+
+    getbyCate($cur_lati,$cur_long,$cate,10);
 
 
 function getbyCate($cur_lati,$cur_long,$cate,$kmfilter){
