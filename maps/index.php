@@ -181,6 +181,7 @@
     <div id="combo">
         <select id="category" onchange="getCategory();">
             <option value=""></option>
+            <option value="Family%20and%20Friends">Family & Friends</option>
             <option value="Legal%20and%20Financial">Legal & Financial</option>
             <option value="Health%20and%20Social%20Services">Health & Social</option>
             <option value="Recreation%20and%20Culture">Recreation & Culture</option>
