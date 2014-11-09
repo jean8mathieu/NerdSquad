@@ -187,36 +187,28 @@ overflow:hidden;
 {
 border:3px solid #0066CC;
 border-radius:10px;
-padding-left:35px;
-margin-left:10px;
+width:90%;
+padding-left:30px;
 }
 .dropdown-toggle
 {
 border:3px solid #0066CC;
 border-radius:10px;
 padding-left:30px;
-
+width:100%;
 }
-.dropdown-show
+.dropdown
 {
 width:100%;
 }
-.dropdown-show
-{
-float:left;
-}
-.dropdown-right
-{
-float:right;
-margin-right:15px;
-}
+
 .dropdown-toggle
 {
 width:100%;
 }
-.show
+.sidebar-module>h1
 {
-float:left;
+font-size:25px;
 }
 
 #list
