@@ -21,7 +21,7 @@ if (!$db_selected) {
 
 // Select all the rows in the markers table
 
-$category = $_GET['Category'];
+$category = $_GET['category'];
 
 if(isset($_GET['category'])){
     $query = "SELECT * FROM Locations WHERE category LIKE '%" . $category . "%'";
@@ -36,6 +36,7 @@ if (!$result) {
 header("Content-type: text/xml");
 
 // Iterate through the rows, adding XML nodes for each
+
 
 while ($row = @mysql_fetch_assoc($result)){
     // ADD TO XML DOCUMENT NODE
@@ -52,7 +53,7 @@ while ($row = @mysql_fetch_assoc($result)){
     $newnode->setAttribute("category",utf8_encode($row['category']));
     $newnode->setAttribute("alert",getLogo($row['category']));
 
-    getLogo($row['category']);
+    //getLogo($row['category']);
 
 }
 
