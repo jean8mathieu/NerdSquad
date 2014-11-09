@@ -1,11 +1,12 @@
 <?php
-
-    $cur_lati = 43.656906;
-    $cur_long = -79.434356;
+    session_start();
+    $cur_lati = $_SESSION['lat'];
+    $cur_long = $_SESSION['long'];
 
 $cate = $_GET['cate'];
+$kmfilter = $_GET['radius'];
 
-getbyCate($cur_lati,$cur_long,$cate,10);
+getbyCate($cur_lati,$cur_long,$cate,$kmfilter);
 
 
 function getbyCate($cur_lati,$cur_long,$cate,$kmfilter){

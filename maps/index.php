@@ -176,7 +176,7 @@
         function getCategory(){
             var e = document.getElementById('category').value;
             domain = "generateXML.php";
-            domain = domain + "?category=" + e;
+            domain = domain + "?category=" + e + "&radius=" <?php echo($_SESSION['radius']); ?>;
             //alert(domain);
             update();
         }
