@@ -22,16 +22,21 @@ function getbyCate($cur_lati,$cur_long,$cate,$kmfilter){
 
     mysql_select_db($SQLdatabase);
 
-    $result = mysql_query("SELECT id,location,description,publicName,category,latitude,longitude,phone,website FROM Locations WHERE category LIKE  '%".$cate."%'");
+    $result = mysql_query("
+SELECT * ,
+( 6371 * ACOS( COS( RADIANS($cur_lati ) ) * COS( RADIANS( latitude ) ) * COS( RADIANS( longitude ) - RADIANS($cur_long ) ) + SIN( RADIANS($cur_lati) ) * SIN( RADIANS( latitude ) ) ) )
+AS distance
+FROM Locations
+WHERE category LIKE  '%".$cate."%'
+HAVING distance <".$kmfilter."
+ORDER BY distance ASC");
 
-    $count = 0;
 
-    while(($row = mysql_fetch_array($result,MYSQL_ASSOC)) &&
-        ($count < 7) &&
-        (distanceFilter($cur_lati, $cur_long, $row["latitude"], $row["longitude"]) <= $kmfilter)) {
-                $distance = &distanceFilter($cur_lati, $cur_long, $row["latitude"], $row["longitude"]) <= $kmfilter;
-                echo("<hr><p>".$row["publicName"]."</p> - ". $distance." km"."       <a href='../detail/index.php?id=".$row["id"]."'>Detail</a>");
-                $count ++;
+    while(($row = mysql_fetch_array($result,MYSQL_ASSOC)) ) {
+                //$distance = &distanceFilter($cur_lati, $cur_long, $row["latitude"], $row["longitude"]) <= $kmfilter;
+                echo("<hr><p>".$row["publicName"]."</p>".
+                    displayHourOperation($row["hoo"])
+                    .round($row['distance'],2)." km"."       <a href='../detail/index.php?id=".$row["id"]."'>Detail</a>");
         }
 
 }
@@ -46,6 +51,13 @@ function distanceFilter($cur_lati,$cur_long,$lati,$long){
     $newphrase = substr($distance,0,-3);
 
     return $newphrase;
+
+}
+
+function displayHourOperation($hour){
+    if(strlen($hour) > 1){
+        return ("<p>Hour of Operation:".$hour."</p>");
+    }
 
 }
 
