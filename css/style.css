@@ -104,7 +104,7 @@ height:100%;
 background-color:white;
 padding-top: 60px;
 min-height: 100%;
-overflow:hidden;
+overflow: scroll;
 }
 h1,p,label
 {
@@ -152,7 +152,7 @@ nav
 {
 padding-left:300px;
 background-color:red;
-overflow:hidden;
+overflow: scroll;
 }
 
 /* Sidebar modules for boxing content */
@@ -201,7 +201,11 @@ width:100%;
 {
 width:100%;
 }
-.blog-sidebar-module{
+.dropdown-menu
+{
+overflow: scroll;
+}
+.blog-sidebar{
 overflow: scroll;
 }
 
