@@ -14,3 +14,6 @@ $_SESSION['long'] = $_GET['long'];
 
 echo $_SESSION['lat'] . "<br>";
 echo $_SESSION['long'];
+
+
+header('Location: http://health.jackiehuang.ca/dashboard');

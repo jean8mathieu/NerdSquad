@@ -1,7 +1,7 @@
 <?php
 
 require("connection.php");
-
+session_start();
 // Start XML file, create parent node
 
 $dom = new DOMDocument("1.0");

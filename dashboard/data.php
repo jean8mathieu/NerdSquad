@@ -1,24 +1,14 @@
 <?php
-<<<<<<< HEAD
+
     session_start();
     $cur_lati = $_SESSION['lat'];
     $cur_long = $_SESSION['long'];
 
 $cate = $_GET['cate'];
 $kmfilter = $_GET['radius'];
+$_SESSION['radius'] = $kmfilter;
 
 getbyCate($cur_lati,$cur_long,$cate,$kmfilter);
-=======
-
-
-
-    $cur_lati = $_SESSION['lat'];
-    $cur_long = $_SESSION['long'];
-
-    $cate = $_GET['cate'];
-
-    getbyCate($cur_lati,$cur_long,$cate,10);
->>>>>>> 0d2109c596caea1868aa890891c5c69eeafeeb49
 
 
 function getbyCate($cur_lati,$cur_long,$cate,$kmfilter){
