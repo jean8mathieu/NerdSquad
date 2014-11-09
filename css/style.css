@@ -131,11 +131,11 @@ border:2 px solid black;
 }
 #right-panel
 {
-height:89%;
+height:88%;
 width:300px;
 background-color:white;
 position:fixed;
-top:53px;
+top:55px;
 left:0px;
 border-right:3px solid #0066CC;
 padding-left:30px;
@@ -145,10 +145,11 @@ overflow-y: scroll;
 nav
 {
 padding-top:200;
-
 background-color:red;
 }
-
+sector{
+width:100%;
+}
 .col-sm-offset-1{
     margin-left: 0 !important;
 }
