@@ -53,14 +53,15 @@
             <h1>ThoughtSpot Resources</h1>
 			<!--Create 'search' element -->
 				<form action="">
-					  <input id="search" type="search" name="googlesearch">
+					  <input id="search" type="search"  name="googlesearch">
 					  <input type="image" src="../images/loupe1.png" alt="Submit" width='15px' height="15px">
 					  
 				</form>
 			<br>
-			<div class="dropdown">
 			<p class="show">Show me:  </p>
-			 <p class="dropdown-toggle" data-toggle="dropdown">all resources <span class="caret"></span></p>
+
+			<div class="dropdown">
+			 <p class=" dropdown-show" data-toggle="dropdown">all resources <span class="caret"></span></p>
 				<ul class="dropdown-menu" role="menu">
                   <li><a href="#">Location 1</a></li>
                   <li><a href="#">Location 2</a></li>
@@ -71,7 +72,7 @@
 				  <li><a href="#">Location 7</a></li>
                 </ul>
 				</div>
-				<hr>
+				<div id="list">
 				<hr>
 				<p>Location 1</p>
 				<hr>
@@ -87,6 +88,7 @@
 				<hr>
 				<p>Location 7</p>
 				<hr>
+				</div>
           </div>
         </div><!-- /.blog-sidebar -->
 
