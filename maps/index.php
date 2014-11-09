@@ -170,12 +170,12 @@
     <div id="combo">
         <select id="category" onchange="getCategory();">
             <option value=""></option>
-            <option value="Legal and Financial">Legal & Financial</option>
-            <option value="Health and Social Services">Health & Social</option>
-            <option value="Recreation and Culture">Recreation & Culture</option>
-            <option value="Spirituality and Wellbeing">Spirituality & Wellbeing</option>
-            <option value="Work and School">Work & School</option>
-            <option value="Sex and Relationships">Sex & Relationships</option>
+            <option value="Legal%20and%20Financial">Legal & Financial</option>
+            <option value="Health%20and%20Social%20Services">Health & Social</option>
+            <option value="Recreation%20and%20Culture">Recreation & Culture</option>
+            <option value="Spirituality%20and%20Wellbeing">Spirituality & Wellbeing</option>
+            <option value="Work%20and%20School">Work & School</option>
+            <option value="Sex%20and%20Relationships">Sex & Relationships</option>
         </select>
     </div>
      </body>
