@@ -40,7 +40,6 @@ body {
 #button
 {
 text-align:center;
-
 }
 #search
 {
@@ -48,10 +47,11 @@ border:3px solid  #0066CC;
 border-radius:10px;
 width:90%;
 }
-.radio{
+.radio
+{
 margin-left:18px;
 }
-#sizedtext,.radio,panel, #question, #usernumber{
+#sizedtext,.radio,#panel, #question, #usernumber{
 font-family: 'Source Sans Pro', sans-serif;
 font-family:bold;
 font-size:22px;
@@ -61,9 +61,12 @@ font-size:22px;
 float:left;
 width:48%;
 }
-.back-next
+button
+{background-color:#0099FF;
+}
+.btn
 {
-float:left;
+float:left;background-color:#0099FF;
 }
 #question
 {
@@ -110,6 +113,7 @@ font-family:bold;
 font-size:18px;
 color:#0066CC;
 }
+
 #image
 {
 margin:auto;
@@ -224,4 +228,12 @@ margin-top:50px;
 {
 float:right;
 margin-top:2px;
+}
+
+#info
+
+{
+border:3px solid #0066CC;
+background-color:#eee;
+height:300px;
 }
