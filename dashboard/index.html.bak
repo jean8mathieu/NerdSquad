@@ -40,7 +40,6 @@
 							
 							<li ><a href=""><span class="glyphicon glyphicon-envelope" ></span> Contact with a specialit</a></li>
 
-							<li ><a href=""><span class="glyphicon glyphicon-list" ></span> Contribute a location</a></li>
 
 						</ul>
 					</div>
@@ -58,10 +57,10 @@
 					  <input type="image" src="../images/loupe1.png" alt="Submit" width='15px' height="15px">
 					  
 				</form>
-			
-				<p>Show me all resources:</p>
+			<div id="show-me">
+			<p>Show me:</p>
 			<div class="dropdown">
-			 <p class="dropdown-toggle" data-toggle="dropdown">Language <span class="caret"></span></p>
+			 <p class="dropdown-toggle" data-toggle="dropdown">all resources <span class="caret"></span></p>
 				<ul class="dropdown-menu" role="menu">
                   <li><a href="#">Location 1</a></li>
                   <li><a href="#">Location 2</a></li>
@@ -72,22 +71,18 @@
 				  <li><a href="#">Location 7</a></li>
                 </ul>
 				</div>
+				</div>
 				<hr>
-				<ul class="" role="menu">
-                  <li><a href="#">Item 1</a></li>
-				  <hr>
-                  <li><a href="#">Item 2</a></li>
-				  <hr>
-                  <li><a href="#">Item 3</a></li>
-				  <hr>
-				  <li><a href="#">Item 4</a></li>
-				  <hr>
-				  <li><a href="#">Item 5</a></li>
-				  <hr>
-                  <li><a href="#">Item 6</a></li>
-				  <hr>
-				  <li><a href="#">Item 7</a></li>
-                </ul>
+				<p>Location 1</p>
+				<hr>
+				<p>Location 1</p>
+				<hr>
+				<p>Location 1</p>
+				<p>Location 1</p>
+
+				<p>Location 1</p>
+				<p>Location 1</p>
+				<p>Location 1</p>
           </div>
         </div><!-- /.blog-sidebar -->
 
