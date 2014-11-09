@@ -2,11 +2,7 @@ html
 {
 height:100%;
 }
-/*
-#bodycontainer
-{
-height:100%;
-}*/
+
 body {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -99,13 +95,12 @@ height:100%;
 }
 .container
 {
-padding-top: 60px;
 margin:auto;
 height:100%;
-background-color:white;
+background-color:red;
 padding-top: 60px;
 min-height: 100%;
-overflow: scroll;
+
 }
 h1,p,label
 {
@@ -115,12 +110,7 @@ font-size:18px;
 color:#0066CC;
 }
 
-#image
-{
-margin:auto;
-width:100%;
-overflow:hidden;
-}
+
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
@@ -140,20 +130,17 @@ border:2 px solid black;
 height:100%;
 width:300px;
 background-color:white;
-opacity:0.98;
 position:fixed;
 top:0px;
 left:0px;
 border-right:3px solid #0066CC;
 padding-top:60px;
-padding-left:30px;
+/*padding-left:30px;*/
 
 }
-nav
+.blog-sidebar
 {
-padding-left:300px;
-background-color:red;
-overflow: scroll;
+overflow-y:scroll;
 }
 
 /* Sidebar modules for boxing content */
@@ -178,12 +165,22 @@ overflow: scroll;
 
 @media screen and (max-width: 800px)
 	{
-		#right-panel{
+		sector{
 			visibility: hidden;
-			width:0px;
+			
 			}
+			.blog-sidebar{
+			width:100%;
+			}
+			nav{
+			width:100%;
+			}
+			
 	}
-	
+nav{
+
+padding-left:300px;
+}
 .dropdown-show
 {
 border:3px solid #0066CC;
@@ -204,10 +201,10 @@ width:100%;
 }
 .dropdown-menu
 {
-overflow: scroll;
+
 }
 .blog-sidebar{
-overflow: scroll;
+
 }
 
 .dropdown-toggle
@@ -231,7 +228,6 @@ margin-top:2px;
 }
 
 #info
-
 {
 border:3px solid #0066CC;
 background-color:#eee;
