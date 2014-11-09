@@ -45,7 +45,7 @@ text-align:center;
 #search
 {
 border:3px solid  #0066CC;
-border-radius:5px;
+border-radius:10px;
 }
 .radio{
 margin-left:18px;
@@ -104,7 +104,7 @@ color:#0066CC;
 #image
 {
 margin:auto;
-height:100%;
+width:100%;
 overflow:hidden;
 }
 .theme-dropdown .dropdown-menu {
@@ -169,3 +169,10 @@ overflow:hidden;
 			width:0px;
 			}
 	}
+	
+.dropdown-toggle
+{
+border:3px solid #0066CC;
+border-radius:10px;
+width:70%;
+}
