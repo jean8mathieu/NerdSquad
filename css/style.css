@@ -51,7 +51,7 @@ width:90%;
 .radio{
 margin-left:18px;
 }
-#sizedtext,.radio,panel, #question{
+#sizedtext,.radio,panel, #question, #usernumber{
 font-family: 'Source Sans Pro', sans-serif;
 font-family:bold;
 font-size:22px;
