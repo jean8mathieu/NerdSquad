@@ -54,14 +54,14 @@
 			<!--Create 'search' element -->
 				<form action="">
 					  <input id="search" type="search"  name="googlesearch">
-					  <input type="image" src="../images/loupe1.png" alt="Submit" width='15px' height="15px">
+					  <input type="image" src="../images/loupe1.png" alt="Submit" style="width:15px; height:15px;">
 					  
 				</form>
 			<br>
 			<p class="show">Show me:  </p>
 
 			<div class="dropdown dropdown-right">
-			 <p class=" dropdown-show" data-toggle="dropdown" id="resourcename">all resources <span class="glyphicon glyphicon-collapse-down" ></span</p>
+                            <p class=" dropdown-show" data-toggle="dropdown" id="resourcename">all resources <span class="glyphicon glyphicon-collapse-down" ></span></p>
 				<ul class="dropdown-menu" role="menu">
                   <li><a href="#" onClick="recp('Family')" > Family and Friends </a></li>
                   <li><a href="#" onClick="recp('Health')" > Health and Social Services </a></li>
