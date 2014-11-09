@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<title>NeardSquad</title>
+		<title>NerdSquad</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -38,7 +38,7 @@
 							
 							<li ><a style="" href=""><span class="glyphicon glyphicon-user" ></span> Thoughts</a></li>	
 							
-							<li ><a href=""><span class="glyphicon glyphicon-envelope" ></span> Coontact a specialit</a></li>
+							<li ><a href=""><span class="glyphicon glyphicon-envelope" ></span> Contact a specialist</a></li>
 
 
 						</ul>
