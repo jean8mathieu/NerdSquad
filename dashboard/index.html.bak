@@ -30,17 +30,17 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<p id="profile">SmartStady</p>
+						<p id="profile">ThoughtSpot2.0</p>
 					</div>
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right" id="mainmenu">
-							<li ><a href=""><span class="glyphicon glyphicon-plus" ></span> Add</a></li>
+							<li ><a href=""><span class="glyphicon glyphicon-plus" ></span> Add your feeling</a></li>
 							
 							<li ><a style="" href=""><span class="glyphicon glyphicon-user" ></span> Thougths</a></li>	
 							
 							<li ><a href=""><span class="glyphicon glyphicon-envelope" ></span> Contact with a specialit</a></li>
 
-							<li ><a href=""><span class="glyphicon glyphicon-list" ></span> Sources</a></li>
+							<li ><a href=""><span class="glyphicon glyphicon-list" ></span> Contribute a location</a></li>
 
 						</ul>
 					</div>
@@ -48,15 +48,55 @@
 			</div>
 		</header>
 		<!------------------------------------------------------------------->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset" id="right-panel">
+            <h1>ThoughtSpot Resources</h1>
+			<!--Create 'search' element -->
+				<form action="">
+					  <input id="search" type="search" name="googlesearch">
+					  <input type="image" src="../images/loupe1.png" alt="Submit" width='15px' height="15px">
+					  
+				</form>
+			
+				<p>Show me all resources:</p>
+			<div class="dropdown">
+			 <p class="dropdown-toggle" data-toggle="dropdown">Language <span class="caret"></span></p>
+				<ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Location 1</a></li>
+                  <li><a href="#">Location 2</a></li>
+                  <li><a href="#">Location 3</a></li>
+				  <li><a href="#">Location 4</a></li>
+				  <li><a href="#">Location 5</a></li>
+                  <li><a href="#">Location 6</a></li>
+				  <li><a href="#">Location 7</a></li>
+                </ul>
+				</div>
+				<hr>
+				<ul class="" role="menu">
+                  <li><a href="#">Item 1</a></li>
+				  <hr>
+                  <li><a href="#">Item 2</a></li>
+				  <hr>
+                  <li><a href="#">Item 3</a></li>
+				  <hr>
+				  <li><a href="#">Item 4</a></li>
+				  <hr>
+				  <li><a href="#">Item 5</a></li>
+				  <hr>
+                  <li><a href="#">Item 6</a></li>
+				  <hr>
+				  <li><a href="#">Item 7</a></li>
+                </ul>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
 		<div id="bodycontainer">
-		<div class="container ol-lg-6">
-		<h1 class="panel">Look at this. We think it may be helpfull for you</h1>
 		<img id="image" src="../images/map.PNG" width="auto" border="0" alt="">
-		</div>
 		</div> <!-- /container -->
 
 	<footer class="footer">
-        <p><p>Content &copy; SmartStudy</p></p>
+        <p><p>SmartStudy&copy;</p></p>
     </footer>
 		<!-- Bootstrap core JavaScript
 		================================================== -->
