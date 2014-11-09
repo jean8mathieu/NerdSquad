@@ -201,6 +201,9 @@ width:100%;
 {
 width:100%;
 }
+.blog-sidebar-module{
+overflow: scroll;
+}
 
 .dropdown-toggle
 {
