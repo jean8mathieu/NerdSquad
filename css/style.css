@@ -135,7 +135,7 @@ height:89%;
 width:300px;
 background-color:white;
 position:fixed;
-top:53px;
+top:55px;
 left:0px;
 border-right:3px solid #0066CC;
 padding-left:30px;
@@ -145,10 +145,17 @@ overflow-y: scroll;
 nav
 {
 padding-top:200;
-
 background-color:red;
 }
-
+#bodycontainer{
+width:100%;
+padding:0px;
+float:left;
+position:fixed;
+top:55px;
+left:0px;
+background-color:red;
+}
 .col-sm-offset-1{
     margin-left: 0 !important;
 }
