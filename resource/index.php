@@ -27,7 +27,7 @@ function getbyCate($cur_lati,$cur_long,$cate,$kmfilter){
 
     mysql_select_db($SQLdatabase);
 
-    $result = mysql_query("SELECT location,description,category,latitude,longitude,address1,city,postalCode,phone,website FROM Locations WHERE category LIKE  '%".$cate."%'");
+    $result = mysql_query("SELECT location,description,category,latitude,longitude,phone,website FROM Locations WHERE category LIKE  '%".$cate."%'");
 
     $count = 0;
 
