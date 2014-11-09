@@ -48,25 +48,31 @@
                 icon: 'images/all.png'
             },
             1: {
-                name: 'Parking',
+                name: 'School & Work',
                 icon: 'images/school.png'
             },
             2: {
+                name: 'Spirituality & Wellbeing',
                 icon: 'images/spirituality.png'
             },
             3: {
+                name: 'Recreation & Culture',
                 icon: 'images/recreation.png'
             },
             4: {
+                name: 'Legal & Financial',
                 icon: 'images/legal.png'
             },
             5: {
+                name: 'Health & Social Services',
                 icon: 'images/health.png'
             },
             6: {
+                name: 'Family & Friends',
                 icon: 'images/family.png'
             },
             7: {
+                name: 'Sex & Relationships',
                 icon: 'images/sex.png'
             }
         };
@@ -93,14 +99,15 @@
 
                 update();
                 var legend = document.getElementById('legend');
-                for (var key in icons) {
-                    var type = icons[key];
+                for (var key in customIcons) {
+                    var type = customIcons[key];
                     var name = type.name;
                     var icon = type.icon;
                     var div = document.createElement('div');
                     div.innerHTML = '<img src="' + icon + '"> ' + name;
                     legend.appendChild(div);
                 }
+                map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
                 }
 
                 function clearOverlays() {
