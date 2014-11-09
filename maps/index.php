@@ -44,27 +44,35 @@
         var markersArray = [];
         var customIcons = {
             0: {
+                name: 'All Categories',
                 icon: 'images/all.png'
             },
             1: {
+                name: 'School & Work',
                 icon: 'images/school.png'
             },
             2: {
+                name: 'Spirituality & Wellbeing',
                 icon: 'images/spirituality.png'
             },
             3: {
+                name: 'Recreation & Culture',
                 icon: 'images/recreation.png'
             },
             4: {
+                name: 'Legal & Financial',
                 icon: 'images/legal.png'
             },
             5: {
+                name: 'Health & Social Services',
                 icon: 'images/health.png'
             },
             6: {
+                name: 'Family & Friends',
                 icon: 'images/family.png'
             },
             7: {
+                name: 'Sex & Relationships',
                 icon: 'images/sex.png'
             }
         };
@@ -90,6 +98,16 @@
                 });
 
                 update();
+                var legend = document.getElementById('legend');
+                for (var key in customIcons) {
+                    var type = customIcons[key];
+                    var name = type.name;
+                    var icon = type.icon;
+                    var div = document.createElement('div');
+                    div.innerHTML = '<img src="' + icon + '"> ' + name;
+                    legend.appendChild(div);
+                }
+                map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
                 }
 
                 function clearOverlays() {
@@ -170,13 +188,18 @@
     <div id="combo">
         <select id="category" onchange="getCategory();">
             <option value=""></option>
+            <option value="Family%20and%20Friends">Family & Friends</option>
             <option value="Legal%20and%20Financial">Legal & Financial</option>
             <option value="Health%20and%20Social%20Services">Health & Social</option>
             <option value="Recreation%20and%20Culture">Recreation & Culture</option>
+            <option value="Family%20and%20Friends">Family & Friends</option>
             <option value="Spirituality%20and%20Wellbeing">Spirituality & Wellbeing</option>
             <option value="Work%20and%20School">Work & School</option>
             <option value="Sex%20and%20Relationships">Sex & Relationships</option>
         </select>
+    </div>
+    <div id="legend">
+        
     </div>
      </body>
 </html>
