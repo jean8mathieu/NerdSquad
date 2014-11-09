@@ -22,11 +22,24 @@ if (!$db_selected) {
 // Select all the rows in the markers table
 
 $category = $_GET['category'];
-
+$radius = $_GET['radius'];
+$lat = $_GET['lat'];
+$long = $_GET['long'];
 if(isset($_GET['category'])){
-    $query = "SELECT * FROM Locations WHERE category LIKE '%" . $category . "%'";
+    $query = "SELECT * ,
+( 6371 * ACOS( COS( RADIANS($lat ) ) * COS( RADIANS( latitude ) ) * COS( RADIANS( longitude ) - RADIANS($long ) ) + SIN( RADIANS($lat) ) * SIN( RADIANS( latitude ) ) ) )
+AS distance
+FROM Locations
+WHERE category LIKE  '%".$category."%'
+HAVING distance <".$radius."
+ORDER BY distance ASC";
 }else{
-    $query = "SELECT * FROM Locations";
+    $query = "SELECT * ,
+( 6371 * ACOS( COS( RADIANS($lat ) ) * COS( RADIANS( latitude ) ) * COS( RADIANS( longitude ) - RADIANS($long ) ) + SIN( RADIANS($lat) ) * SIN( RADIANS( latitude ) ) ) )
+AS distance
+FROM Locations
+WHERE HAVING distance <".$radius."
+ORDER BY distance ASC";
 }
 $result = mysql_query($query);
 if (!$result) {

@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 
 <html>
@@ -17,6 +19,16 @@
 		<link rel="stylesheet" type="text/css" href="../css/panel.css">
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600,700' rel='stylesheet' type='text/css'>
 		<!--<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">-->
+
+
+        <script>
+            function something(){
+                var answer =  prompt("Please enter your toughts!");
+                return answer;
+            }
+
+        <?php include("getLoc.php") ?>
+        </script>
 	</head>
 	<body>
 		<!----------------Creating the navigation panel---------------------->
@@ -34,7 +46,7 @@
 					</div>
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right" id="mainmenu">
-							<li ><a href=""><span class="glyphicon glyphicon-question-sign" ></span> How're you feeling</a></li>
+							<li ><a href=""><span class="glyphicon glyphicon-question-sign" onclick="something()"></span> How're you feeling</a></li>
 							
 							<li ><a style="" href=""><span class="glyphicon glyphicon-user" ></span> Thoughts</a></li>	
 							
