@@ -63,31 +63,16 @@
 			<div class="dropdown dropdown-right">
 			 <p class=" dropdown-show" data-toggle="dropdown">all resources <span class="glyphicon glyphicon-collapse-down" ></span</p>
 				<ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Location 1</a></li>
-                  <li><a href="#">Location 2</a></li>
-                  <li><a href="#">Location 3</a></li>
-				  <li><a href="#">Location 4</a></li>
-				  <li><a href="#">Location 5</a></li>
-                  <li><a href="#">Location 6</a></li>
-				  <li><a href="#">Location 7</a></li>
+                  <li><a href="#" onClick="recp('Family')" > Family and Friends </a></li>
+                  <li><a href="#" onClick="recp('Health')" > Health and Social Services </a></li>
+                  <li><a href="#" onClick="recp('Legal')" > Legal and Financia  </a></li>
+				  <li><a href="#" onClick="recp('Recreation')" > Recreation and Culture </a></li>
+				  <li><a href="#" onClick="recp('Spirituality')" > Spirituality and Wellbeing </a></li>
+                  <li><a href="#" onClick="recp('Work')" > Work and School </a></li>
+                  <li><a href="#" onClick="recp('Sex')" > Sex and Relationships  </a></li>
                 </ul>
 			</div>
 				<div id="list">
-				<hr>
-				<p>Location 1</p>
-				<hr>
-				<p>Location 2</p>
-				<hr>
-				<p>Location 3</p>
-				<hr>
-				<p>Location 4</p>
-				<hr>
-				<p>Location 5</p>
-				<hr>
-				<p>Location 6</p>
-				<hr>
-				<p>Location 7</p>
-				<hr>
 				</div>
           </div>
         </div><!-- /.blog-sidebar -->
@@ -107,5 +92,11 @@
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<script src="../js/ie10-viewport-bug-workaround.js"></script>
 		<script src="../js/ie-emulation-modes-warning.js"></script>
+
+        <script type="text/javascript">
+            function recp(cate) {
+                $('#list').load('data.php?cate=' + cate);
+            }
+        </script>
 	</body>
 </html>
