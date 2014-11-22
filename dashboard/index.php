@@ -15,6 +15,8 @@
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
 
 		<!-- Custom styles for this templates -->
+		<link rel="stylesheet" type="text/css" href="../css/style_one.css">
+		<link rel="stylesheet" type="text/css" href="../css/style_two.css">
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<link rel="stylesheet" type="text/css" href="../css/panel.css">
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600,700' rel='stylesheet' type='text/css'>
@@ -43,161 +45,9 @@
             include("getLoc.php");
         }
          ?>
-        <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            // Initialize the Google Maps API v3
-            var domain = "generateXML.php";
-            var markers = [];
-            var map;
-            var x = 0;
-            var infoWindow;
-            var marker;
-            var markersArray = [];
-            var customIcons = {
-                0: {
-                    name: 'All Categories',
-                    icon: 'images/all.png'
-                },
-                1: {
-                    name: 'School & Work',
-                    icon: 'images/school.png'
-                },
-                2: {
-                    name: 'Spirituality & Wellbeing',
-                    icon: 'images/spirituality.png'
-                },
-                3: {
-                    name: 'Recreation & Culture',
-                    icon: 'images/recreation.png'
-                },
-                4: {
-                    name: 'Legal & Financial',
-                    icon: 'images/legal.png'
-                },
-                5: {
-                    name: 'Health & Social Services',
-                    icon: 'images/health.png'
-                },
-                6: {
-                    name: 'Family & Friends',
-                    icon: 'images/family.png'
-                },
-                7: {
-                    name: 'Sex & Relationships',
-                    icon: 'images/sex.png'
-                }
-            };
-
-            function initialize() {
-                map = new google.maps.Map(document.getElementById('map'), {
-                    center: new google.maps.LatLng(43.6558658, -79.380568),
-                    zoom: 10,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                });
-                infoWindow = new google.maps.InfoWindow;
-
-                navigator.geolocation.getCurrentPosition(function (position) {
-
-
-                    var newPoint = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-
-                    x++;
-                    if (x === 1) {
-                        console.log(newPoint);
-                        map.setCenter(newPoint);
-                    }
-                });
-
-                update();
-                var legend = document.getElementById('legend');
-                for (var key in customIcons) {
-                    var type = customIcons[key];
-                    var name = type.name;
-                    var icon = type.icon;
-                    var div = document.createElement('div');
-                    div.innerHTML = '<img src="' + icon + '"> ' + name;
-                    legend.appendChild(div);
-                }
-                map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
-            }
-
-            function clearOverlays() {
-                for (var i = 0; i < markersArray.length; i++) {
-                    markersArray[i].setMap(null);
-                }
-            }
-
-
-
-            function update(){
-                clearOverlays();
-                downloadUrl( domain, function (data) {
-                    var xml = data.responseXML;
-                    var markers = xml.documentElement.getElementsByTagName("marker");
-                    console.log(markers);
-                    for (var i = 0; i < markers.length; i++) {
-                        var title = markers[i].getAttribute("title");
-                        var desc = markers[i].getAttribute("desc");
-                        var location = markers[i].getAttribute("location");
-                        var category = markers[i].getAttribute("category");
-                        var type = markers[i].getAttribute("alert");
-                        var point = new google.maps.LatLng(
-                            parseFloat(markers[i].getAttribute("lat")),
-                            parseFloat(markers[i].getAttribute("lng")));
-                        var html = "<b>" + title + "<br>" + location + "<br>" + category + + "</b>";
-                        var icon = customIcons[type] || {};
-                        marker = new google.maps.Marker({
-                            map: map,
-                            position: point,
-                            icon: icon.icon
-                        });
-                        markersArray.push(marker);
-
-                        bindInfoWindow(marker, map, infoWindow, html);
-                    }
-                });
-
-            }
-
-            function bindInfoWindow(marker, map, infoWindow, html) {
-                google.maps.event.addListener(marker, 'click', function () {
-                    infoWindow.setContent(html);
-                    infoWindow.open(map, marker);
-                });
-            }
-
-            function downloadUrl(url, callback) {
-                var request = window.ActiveXObject ?
-                    new ActiveXObject('Microsoft.XMLHTTP') :
-                    new XMLHttpRequest;
-
-                request.onreadystatechange = function () {
-                    if (request.readyState == 4) {
-                        request.onreadystatechange = doNothing;
-                        callback(request, request.status);
-                    }
-                };
-
-                request.open('GET', url, true);
-                request.send(null);
-            }
-            function doNothing() {
-            }
-
-            function getCategory(){
-                var e = document.getElementById('category').value;
-                domain = "generateXML.php";
-                domain = domain + "?category=" + e + "&radius=" <?php echo($_SESSION['radius']); ?>;
-                //alert(domain);
-                update();
-            }
-
-        </script>
-
 	</head>
-	<body onload="initialize();">   
-		<!----------------Creating the navigation panel---------------------->
+	<body>
+		<!----------------Creating the navigation panel--------------------->
 		<header>
 			<div class="navbar navbar-inverse navbar-fixed-top " role="navigation">
 				<div class="container-fluid">
@@ -226,7 +76,7 @@
 		</header>
 		<!------------------------------------------------------------------->
 
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar" id="ex3">
           <div class="sidebar-module sidebar-module-inset" id="right-panel">
             <h1>ThoughtSpot Resources</h1>
 			<!--Create 'search' element -->
@@ -238,8 +88,9 @@
 			<br>
 			<p class="show">Show me:  </p>
 
-			<div class="dropdown dropdown-right">
-                            <p class=" dropdown-show" data-toggle="dropdown" id="resourcename">all resources <span class="glyphicon glyphicon-collapse-down" ></span></p>
+			<div class="dropdown dropdown-left">
+                <p class=" dropdown-show" data-toggle="dropdown"><var id="resourcename">all resources</var><span class="glyphicon glyphicon-collapse-down" ></span></p>
+
 				<ul class="dropdown-menu" role="menu">
                   <li><a href="#" onClick="recp('Family')" > Family and Friends </a></li>
                   <li><a href="#" onClick="recp('Health')" > Health and Social Services </a></li>
@@ -251,13 +102,13 @@
                 </ul>
 			</div>
 
-				<div id="list">
-				</div>
+			<div id="list">
+			</div>
           </div>
         </div><!-- /.blog-sidebar -->
 
 		<div id="bodycontainer">
-            <div id="map"></div>
+            <?php include("../maps/index_2.php"); ?>
 		</div> <!-- /container -->
 
 	<footer class="footer">
@@ -280,7 +131,7 @@
                 if(cate == "Family"){
                     var element = document.getElementById("resourcename");
                     element.innerHTML = "Family and Friends";
-
+                     
 
                 }else if(cate == "Health"){
                     var element = document.getElementById("resourcename");

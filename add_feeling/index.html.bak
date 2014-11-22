@@ -31,7 +31,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<p id="profile">MindFree</p>
+						<p id="profile"> ThoughtSpot2.0</p>
 					</div>
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right" id="mainmenu">
@@ -64,7 +64,7 @@
 		</div> <!-- /container -->
 
 	<footer class="footer">
-        <p id="footer">MindFree&copy;</p>
+        <p id="footer">ThoughtSpot2.&copy;</p>
     </footer>
 		<!-- Bootstrap core JavaScript
 		================================================== -->

@@ -1,9 +1,11 @@
+/*header*/
 .navbar-inverse .navbar-nav>li>a
 	{
-	color:White;
+		color:White;
 		font-weight: bold;
 		font-size: 16px;
 	}
+	
 .navbar-fixed-top 
 	{
 	    border: 0;
@@ -25,31 +27,33 @@
 		padding-top:0;
 		margin-top:0;
 	}
-
+	
+header
+	{
+		height:40px;
+	}
 /*
  * footer
  */
 #footer
-{
-border-top:3px solid #0066CC;
-margin:0px;
-background-color:#0099FF;
-color:white;
-font-family: 'Source Sans Pro', sans-serif;
-font-family:bold;
-font-size:20px;
-position:fixed;
-bottom:0;
-padding:10px;
-text-align:center;
-opacity:1;
-width:100%;
-}
+	{
+		border-top:3px solid #0066CC;
+		margin:0px;
+		background-color:#0099FF;
+		color:white;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-family:bold;
+		font-size:20px;
+		position:fixed;
+		bottom:0;
+		padding:10px;
+		text-align:center;
+		opacity:1;
+		width:100%;
+		z-index:100;
+	}
+
 #footer p
-{
-color:white;
-}
-#bodycontainer
-{
-height:100%;
-}
+	{
+		color:white;
+	}

@@ -24,7 +24,7 @@
 			<div class="navbar navbar-inverse navbar-fixed-top " role="navigation">
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<button  type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -34,8 +34,7 @@
 					</div>
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right" id="mainmenu">
-							<li ><a href="" id="myThought" onclick="something()"><span class="glyphicon glyphicon-question-sign" ></span> How're you feeling</a></li>
-                                                        
+							<li ><a href=""><span class="glyphicon glyphicon-question-sign" ></span> How're you feeling</a></li>
 							
 							<li ><a style="" href=""><span class="glyphicon glyphicon-user" ></span> Thoughts</a></li>	
 							
@@ -43,24 +42,12 @@
 
 
 						</ul>
-                                            <script>
-                                                function something(){
-                                                   var answer =  prompt("Please enter your toughts!");
-                                                     return answer;
-}
-    
-
-
-                                                
-                                                            
-                                                            
-                                                        </script>
 					</div>
 				</div>
 			</div>
 		</header>
 		<!------------------------------------------------------------------->
-<nav>
+
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset" id="right-panel">
             <h1>ThoughtSpot Resources</h1>
@@ -85,15 +72,15 @@
                   <li><a href="#" onClick="recp('Sex')" > Sex and Relationships </a></li>
                 </ul>
 			</div>
-
+				<div id="list">
+				</div>
           </div>
         </div><!-- /.blog-sidebar -->
-</nav>
-<sector>
+
 		<div id="bodycontainer">
-		<!--<img id="image" src="../images/map.PNG" style="width:auto; border:0px;" alt=''>-->
+            <?php include("../maps/index.php"); ?>
 		</div> <!-- /container -->
-</sector>
+
 	<footer class="footer">
        <p id="footer">ThoughtSpot2.&copy;</p>
     </footer>
