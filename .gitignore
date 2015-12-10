@@ -1,1 +1,5 @@
 /maps/nbproject/private/
+databaseinfo.txt
+ftpinfo.txt
+maps/connection.php
+dashboard/connection.php
