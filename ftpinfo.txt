@@ -1,4 +1,0 @@
-Host: sftp://jackiehuang.ca
-Path:/home/content/79/9124079/html/health
-username: huangquanzhi
-password: Jackie1218!
